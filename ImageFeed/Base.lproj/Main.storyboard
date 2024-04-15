@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dz0-qL-RxS">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -80,13 +80,14 @@
                             <constraint firstItem="Icv-ed-Caf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ySb-cG-pWJ"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="tab_editorial_active" id="MxB-ol-mta"/>
                     <connections>
                         <outlet property="tableView" destination="Icv-ed-Caf" id="uUB-3y-3N8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="107.63358778625954" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="653" y="-882"/>
         </scene>
         <!--Profile-->
         <scene sceneID="3Ni-hz-F81">
@@ -147,6 +148,7 @@
                             <constraint firstItem="0nn-Qr-VHY" firstAttribute="top" secondItem="bi4-df-hs1" secondAttribute="top" constant="55" id="urx-0F-cRU"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="tab_profile_active" id="kh5-ce-vmR"/>
                     <connections>
                         <outlet property="avatarImageView" destination="od8-p9-Vr0" id="bRQ-A9-dSP"/>
                         <outlet property="descriptionLabel" destination="CxE-pV-UX9" id="cBX-wb-yPW"/>
@@ -157,7 +159,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZP-vk-ZtT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.64122137404578" y="-711.26760563380287"/>
+            <point key="canvasLocation" x="653" y="-1599"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="M4p-JC-2Sr">
+            <objects>
+                <tabBarController id="Dz0-qL-RxS" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uma-uq-J7b">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="YP Black"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="u4V-tk-K8c"/>
+                        <segue destination="M2R-P4-AFs" kind="relationship" relationship="viewControllers" id="0td-Rl-1ey"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yz2-oF-AZV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-220" y="-1202"/>
         </scene>
     </scenes>
     <color key="tintColor" name="AccentColor"/>
@@ -25075,6 +25096,8 @@ AAAAAAAWy2Q
         </image>
         <image name="like_button_on" width="42" height="42"/>
         <image name="logout_button" width="24" height="24"/>
+        <image name="tab_editorial_active" width="31" height="30"/>
+        <image name="tab_profile_active" width="31" height="30"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
