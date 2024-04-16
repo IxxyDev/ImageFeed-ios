@@ -83,11 +83,12 @@
                     <navigationItem key="navigationItem" id="xTe-q6-Xeb"/>
                     <connections>
                         <outlet property="tableView" destination="Icv-ed-Caf" id="uUB-3y-3N8"/>
+                        <segue destination="XmP-vc-s1L" kind="show" identifier="ShowSingleImage" id="O7Y-z5-yne"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1579.3893129770993" y="-882.3943661971831"/>
+            <point key="canvasLocation" x="1584" y="-882"/>
         </scene>
         <!--Profile-->
         <scene sceneID="3Ni-hz-F81">
@@ -226,13 +227,14 @@
                             <constraint firstItem="v0R-aq-0Sk" firstAttribute="leading" secondItem="G8C-WP-nyu" secondAttribute="leading" constant="96" id="Zn0-9M-uRd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="5Tv-f8-ce7"/>
                     <connections>
                         <outlet property="imageView" destination="v0R-aq-0Sk" id="77b-AY-DcI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohp-Zy-X6e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1308" y="-1377"/>
+            <point key="canvasLocation" x="2485" y="-882"/>
         </scene>
     </scenes>
     <color key="tintColor" name="AccentColor"/>
