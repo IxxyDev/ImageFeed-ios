@@ -205,9 +205,39 @@
             </objects>
             <point key="canvasLocation" x="652.67175572519079" y="-882.3943661971831"/>
         </scene>
+        <!--SingleImageViewController-->
+        <scene sceneID="FcD-ng-eWq">
+            <objects>
+                <viewController id="XmP-vc-s1L" userLabel="SingleImageViewController" customClass="SingleImageViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VzL-EF-J9o">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="v0R-aq-0Sk">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G8C-WP-nyu"/>
+                        <color key="backgroundColor" name="YP Black"/>
+                        <constraints>
+                            <constraint firstItem="G8C-WP-nyu" firstAttribute="trailing" secondItem="v0R-aq-0Sk" secondAttribute="trailing" id="5C1-i7-eYD"/>
+                            <constraint firstItem="G8C-WP-nyu" firstAttribute="bottom" secondItem="v0R-aq-0Sk" secondAttribute="bottom" constant="599" id="7Ue-kv-7cB"/>
+                            <constraint firstItem="v0R-aq-0Sk" firstAttribute="top" secondItem="G8C-WP-nyu" secondAttribute="top" constant="32" id="YYE-yV-CbS"/>
+                            <constraint firstItem="v0R-aq-0Sk" firstAttribute="leading" secondItem="G8C-WP-nyu" secondAttribute="leading" constant="96" id="Zn0-9M-uRd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="v0R-aq-0Sk" id="77b-AY-DcI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ohp-Zy-X6e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1308" y="-1377"/>
+        </scene>
     </scenes>
     <color key="tintColor" name="AccentColor"/>
     <resources>
+        <image name="0" width="200" height="132"/>
         <image name="avatar" width="70" height="70"/>
         <image name="imageView:ALs-jl-urg:image" width="200" height="132">
             <mutableData key="keyedArchiveRepresentation">
