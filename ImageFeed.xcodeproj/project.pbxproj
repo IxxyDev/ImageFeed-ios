@@ -91,14 +91,14 @@
 		3F3A942F2B28CD4D00838A3B /* ImageFeed */ = {
 			isa = PBXGroup;
 			children = (
+				3F02D0112B5D9FC0001165CC /* ImagesList */,
 				3FA500852BCDC65400B83327 /* Profile */,
+				3F02D0142B5D9FC0001165CC /* Resources */,
+				3FA5008C2BCEC0F800B83327 /* SingleImageView */,
+				3F02D00C2B5D9FC0001165CC /* Base.lproj */,
 				3FF919002B570B1B0012DFDF /* Info.plist */,
 				3FF918F42B57058E0012DFDF /* AppDelegate.swift */,
 				3FF918F72B57058E0012DFDF /* SceneDelegate.swift */,
-				3F02D00C2B5D9FC0001165CC /* Base.lproj */,
-				3F02D0112B5D9FC0001165CC /* ImagesList */,
-				3F02D0142B5D9FC0001165CC /* Resources */,
-				3FA5008A2BCEBDD700B83327 /* SingleImageViewController.swift */,
 			);
 			path = ImageFeed;
 			sourceTree = "<group>";
@@ -109,6 +109,14 @@
 				3FA500862BCDC66B00B83327 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		3FA5008C2BCEC0F800B83327 /* SingleImageView */ = {
+			isa = PBXGroup;
+			children = (
+				3FA5008A2BCEBDD700B83327 /* SingleImageViewController.swift */,
+			);
+			path = SingleImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
