@@ -214,11 +214,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTG-ml-Yof" userLabel="Share Button">
+                                <rect key="frame" x="182" y="829" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Nkf-av-S1v"/>
+                                    <constraint firstAttribute="width" constant="50" id="doT-9e-kp3"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="share_button"/>
+                                <connections>
+                                    <action selector="didTapShareButton:" destination="XmP-vc-s1L" eventType="touchUpInside" id="edq-CD-jgg"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nSG-xm-wAs">
                                 <rect key="frame" x="-20" y="-20" width="454" height="936"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="v0R-aq-0Sk">
-                                        <rect key="frame" x="20" y="20" width="200" height="132"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="271" height="352"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -228,24 +240,25 @@
                                     <outlet property="delegate" destination="XmP-vc-s1L" id="2rR-GP-tg4"/>
                                 </connections>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdu-pr-jpF">
-                                <rect key="frame" x="8" y="4" width="48" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdu-pr-jpF">
+                                <rect key="frame" x="8" y="8" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="KBd-hr-fLw"/>
                                     <constraint firstAttribute="height" constant="48" id="nlS-Y5-mHd"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="nav_back_button_white"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="G8C-WP-nyu"/>
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
-                            <constraint firstItem="G8C-WP-nyu" firstAttribute="top" secondItem="nSG-xm-wAs" secondAttribute="top" id="Fd4-MK-p4M"/>
-                            <constraint firstItem="jdu-pr-jpF" firstAttribute="top" secondItem="G8C-WP-nyu" secondAttribute="top" constant="4" id="Jgc-pV-o1l"/>
+                            <constraint firstItem="nSG-xm-wAs" firstAttribute="top" secondItem="VzL-EF-J9o" secondAttribute="top" id="Fd4-MK-p4M"/>
+                            <constraint firstItem="jdu-pr-jpF" firstAttribute="top" secondItem="G8C-WP-nyu" secondAttribute="top" constant="8" id="Jgc-pV-o1l"/>
                             <constraint firstItem="G8C-WP-nyu" firstAttribute="leading" secondItem="nSG-xm-wAs" secondAttribute="leading" id="WM8-Sk-5hT"/>
-                            <constraint firstItem="nSG-xm-wAs" firstAttribute="bottom" secondItem="G8C-WP-nyu" secondAttribute="bottom" id="heD-y5-PDU"/>
+                            <constraint firstItem="nSG-xm-wAs" firstAttribute="bottom" secondItem="VzL-EF-J9o" secondAttribute="bottom" id="heD-y5-PDU"/>
                             <constraint firstItem="jdu-pr-jpF" firstAttribute="leading" secondItem="G8C-WP-nyu" secondAttribute="leading" constant="8" id="mH7-gG-SIo"/>
-                            <constraint firstItem="nSG-xm-wAs" firstAttribute="trailing" secondItem="G8C-WP-nyu" secondAttribute="trailing" id="o8n-Bo-v5L"/>
+                            <constraint firstItem="G8C-WP-nyu" firstAttribute="trailing" secondItem="nSG-xm-wAs" secondAttribute="trailing" id="o8n-Bo-v5L"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Tv-f8-ce7"/>
@@ -257,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohp-Zy-X6e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2485" y="-882"/>
+            <point key="canvasLocation" x="2484.057971014493" y="-882.58928571428567"/>
         </scene>
     </scenes>
     <color key="tintColor" name="AccentColor"/>
@@ -25176,6 +25189,8 @@ AAAAAAAWy2Q
         </image>
         <image name="like_button_on" width="42" height="42"/>
         <image name="logout_button" width="24" height="24"/>
+        <image name="nav_back_button_white" width="24" height="24"/>
+        <image name="share_button" width="50" height="50"/>
         <image name="tab_editorial_active" width="31" height="30"/>
         <image name="tab_profile_active" width="31" height="30"/>
         <namedColor name="AccentColor">
