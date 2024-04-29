@@ -94,16 +94,7 @@
         <scene sceneID="3Ni-hz-F81">
             <objects>
                 <viewController id="M2R-P4-AFs" userLabel="Profile" customClass="ProfileViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bBL-WW-vrU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="bi4-df-hs1"/>
-                        <color key="backgroundColor" name="YP Black"/>
-                    </view>
                     <tabBarItem key="tabBarItem" title="" image="tab_profile_active" id="kh5-ce-vmR"/>
-                    <connections>
-                        <outlet property="loginNameLabel" destination="bBL-WW-vrU" id="qeD-HX-E1L"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZP-vk-ZtT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,7 +161,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="share_button"/>
                                 <connections>
-                                    <action selector="didTapShareButton:" destination="XmP-vc-s1L" eventType="touchUpInside" id="edq-CD-jgg"/>
+                                    <action selector="didShareTap:" destination="XmP-vc-s1L" eventType="touchUpInside" id="qvo-so-scf"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nSG-xm-wAs">
@@ -195,6 +186,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="nav_back_button_white"/>
+                                <connections>
+                                    <action selector="didBackTap:" destination="XmP-vc-s1L" eventType="touchUpInside" id="BbP-cF-AbJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="G8C-WP-nyu"/>
