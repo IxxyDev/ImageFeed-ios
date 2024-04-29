@@ -107,7 +107,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uma-uq-J7b">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="YP Black"/>
+                        <color key="backgroundColor" name="YP_Black"/>
+                        <color key="tintColor" name="YP_Black"/>
+                        <color key="barTintColor" name="YP_Black"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
@@ -187,7 +189,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="nav_back_button_white"/>
                                 <connections>
-                                    <action selector="didBackTap:" destination="XmP-vc-s1L" eventType="touchUpInside" id="BbP-cF-AbJ"/>
+                                    <action selector="didTapBackButton" destination="XmP-vc-s1L" eventType="touchUpInside" id="XJq-ga-crF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -204,7 +206,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="5Tv-f8-ce7"/>
                     <connections>
-                        <outlet property="closeButton" destination="jdu-pr-jpF" id="TKA-cC-P5j"/>
                         <outlet property="imageView" destination="v0R-aq-0Sk" id="77b-AY-DcI"/>
                         <outlet property="scrollView" destination="nSG-xm-wAs" id="7pJ-Fr-cRo"/>
                     </connections>
@@ -25136,6 +25137,9 @@ AAAAAAAWy2Q
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="YP Black">
+            <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="YP_Black">
             <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
