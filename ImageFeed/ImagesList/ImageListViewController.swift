@@ -70,8 +70,6 @@ extension ImageListViewController: UITableViewDataSource {
 
 extension ImageListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("PATH", indexPath)
-        print(showSingleImageSegueIdentifier)
         performSegue(withIdentifier: showSingleImageSegueIdentifier, sender: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
