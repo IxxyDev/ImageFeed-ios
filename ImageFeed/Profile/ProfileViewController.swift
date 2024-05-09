@@ -55,7 +55,7 @@ final class ProfileViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(label)
         
-        label.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8).isActive = true
+        label.topAnchor.constraint(equalTo: usernameLabel.bottomAnchor, constant: 8).isActive = true
         label.leadingAnchor.constraint(equalTo: profileImage.leadingAnchor).isActive = true
         label.trailingAnchor.constraint(equalTo: nameLabel.trailingAnchor).isActive = true
         label.heightAnchor.constraint(equalToConstant: 18).isActive = true
