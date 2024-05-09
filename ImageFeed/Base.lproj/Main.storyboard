@@ -21,45 +21,42 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" name="YP Black"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImagesListCell" rowHeight="181" id="wLe-hA-ER0" customClass="ImagesListCell" customModule="ImageFeed" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="181"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImagesListCell" rowHeight="224" id="wLe-hA-ER0" customClass="ImagesListCell" customModule="ImageFeed" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="224"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wLe-hA-ER0" id="FsQ-m5-DXu">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="181"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYd-e3-vL1" userLabel="Like Button">
-                                                    <rect key="frame" x="356" y="4" width="42" height="42"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ALs-jl-urg" userLabel="Cell Image">
+                                                    <rect key="frame" x="16" y="4" width="382" height="216"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYd-e3-vL1" userLabel="Like Button">
+                                                    <rect key="frame" x="356" y="4" width="44" height="44"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="like_button_on"/>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22 декабря 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0jB-mh-iMx" userLabel="Date Label">
-                                                    <rect key="frame" x="20" y="153" width="134" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22 декабря 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jB-mh-iMx" userLabel="Date Label">
+                                                    <rect key="frame" x="24" y="200" width="382" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ALs-jl-urg" userLabel="Cell Image">
-                                                    <rect key="frame" x="16" y="4" width="382" height="216"/>
-                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="ALs-jl-urg" firstAttribute="trailing" secondItem="kYd-e3-vL1" secondAttribute="trailing" id="4Ba-O7-ESx"/>
-                                                <constraint firstItem="ALs-jl-urg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0jB-mh-iMx" secondAttribute="trailing" constant="8" id="HJH-qe-eAr"/>
-                                                <constraint firstItem="0jB-mh-iMx" firstAttribute="leading" secondItem="ALs-jl-urg" secondAttribute="leading" constant="8" id="HtP-Bs-8sV"/>
-                                                <constraint firstItem="kYd-e3-vL1" firstAttribute="top" secondItem="ALs-jl-urg" secondAttribute="top" id="XkZ-iX-tUc"/>
-                                                <constraint firstItem="ALs-jl-urg" firstAttribute="bottom" secondItem="0jB-mh-iMx" secondAttribute="bottom" constant="8" id="c1T-oL-FBR"/>
+                                                <constraint firstAttribute="trailing" secondItem="ALs-jl-urg" secondAttribute="trailing" constant="16" id="6YV-xw-qsE"/>
+                                                <constraint firstAttribute="bottom" secondItem="ALs-jl-urg" secondAttribute="bottom" constant="4" id="Ggk-IP-I5O"/>
+                                                <constraint firstItem="0jB-mh-iMx" firstAttribute="leading" secondItem="ALs-jl-urg" secondAttribute="leading" constant="8" id="LBs-h4-Q6b"/>
+                                                <constraint firstItem="0jB-mh-iMx" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ALs-jl-urg" secondAttribute="trailing" constant="8" id="Srw-uD-QXO"/>
+                                                <constraint firstItem="ALs-jl-urg" firstAttribute="bottom" secondItem="0jB-mh-iMx" secondAttribute="bottom" constant="4" id="TkT-5f-7RC"/>
+                                                <constraint firstItem="kYd-e3-vL1" firstAttribute="trailing" secondItem="ALs-jl-urg" secondAttribute="trailing" id="c5F-sv-Yg0"/>
+                                                <constraint firstItem="ALs-jl-urg" firstAttribute="top" secondItem="FsQ-m5-DXu" secondAttribute="top" constant="4" id="dwv-Jf-ziG"/>
+                                                <constraint firstItem="ALs-jl-urg" firstAttribute="leading" secondItem="FsQ-m5-DXu" secondAttribute="leading" constant="16" id="pFL-do-NQg"/>
+                                                <constraint firstItem="kYd-e3-vL1" firstAttribute="top" secondItem="ALs-jl-urg" secondAttribute="top" id="sj2-JH-Apj"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="YP Black"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="ALs-jl-urg" secondAttribute="trailing" constant="16" id="0HP-HV-Q4Z"/>
-                                            <constraint firstItem="ALs-jl-urg" firstAttribute="leading" secondItem="wLe-hA-ER0" secondAttribute="leading" constant="16" id="HcM-vS-sXI"/>
-                                            <constraint firstAttribute="bottom" secondItem="ALs-jl-urg" secondAttribute="bottom" constant="-39" id="cbg-L8-euH" userLabel="bottom = Cell Image.bottom + 4"/>
-                                            <constraint firstItem="ALs-jl-urg" firstAttribute="top" secondItem="wLe-hA-ER0" secondAttribute="top" constant="4" id="xFK-rf-7Qc"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="cellImage" destination="ALs-jl-urg" id="frh-je-9MD"/>
                                             <outlet property="dateLabel" destination="0jB-mh-iMx" id="D91-Rt-2ux"/>
