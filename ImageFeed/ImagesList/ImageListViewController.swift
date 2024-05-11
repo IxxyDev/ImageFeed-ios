@@ -2,7 +2,7 @@ import UIKit
 
 final class ImageListViewController: UIViewController {
     private let topInset: CGFloat = 12
-    private let bottomInset: CGFloat = 12
+    private let showSingleImageSegueIdentifier = "ShowSingleImage"
     private let photosName: [String] = Array(0..<20).map{"\($0)"}
     private lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -13,9 +13,26 @@ final class ImageListViewController: UIViewController {
     
     @IBOutlet private var tableView: UITableView!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.contentInset = UIEdgeInsets(top: topInset, left: 0, bottom: bottomInset, right: 0)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.contentInset = UIEdgeInsets(top: topInset, left: 0, bottom: 0, right: 0)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == showSingleImageSegueIdentifier {
+            guard let viewController = segue.destination as? SingleImageViewController else {return}
+            guard let indexPath = sender as? IndexPath else {return}
+            let image = UIImage(named: photosName[indexPath.row])
+            viewController.image = image
+        } else {
+            super.prepare(for: segue, sender: sender)
+        }
     }
     
     func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {
@@ -54,6 +71,7 @@ extension ImageListViewController: UITableViewDataSource {
 
 extension ImageListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: showSingleImageSegueIdentifier, sender: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
