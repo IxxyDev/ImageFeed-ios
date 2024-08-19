@@ -1,4 +1,5 @@
 import UIKit
+import WebKit
 
 protocol WebViewControllerDelegate: AnyObject {
     func webViewController(_ viewController: WebViewController, didAuthenticateCode code: String)
@@ -19,6 +20,12 @@ final class WebViewController: UIViewController {
       static let scope = "scope"
     }
     
+    @IBOutlet private weak var webView: WKWebView!
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBAction func didTapBackButton(_ sender: Any) {
+        delegate?.webViewControllerDidCancel(self)
+    }
+    
     weak var delegate: WebViewControllerDelegate?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -37,8 +44,8 @@ final class WebViewController: UIViewController {
 extension WebViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        webView.removeObserver(
-            self,       
+        webView.addObserver(
+            self,
             forKeyPath: #keyPath(WKWebView.estimatedProgress),
             options: .new,
             context: nil
@@ -72,10 +79,10 @@ private extension WebViewController {
             preconditionFailure("Incorrect \(WebConstants.authURLString) string")
         }
         urlComponents.queryItems = [
-            URLQueryItem(name: WebElements.clientId, value: accessKey),
-            URLQueryItem(name: WebElements.redirectUri, value: redirectURI),
+            URLQueryItem(name: WebElements.clientId, value: Constants.accessKey),
+            URLQueryItem(name: WebElements.redirectUri, value: Constants.redirectURI),
             URLQueryItem(name: WebElements.responseType, value: WebConstants.code),
-            URLQueryItem(name: WebElements.scope, value: accessScope)
+            URLQueryItem(name: WebElements.scope, value: Constants.accessScope)
         ]
         
         guard let url = urlComponents.url else {
@@ -90,7 +97,7 @@ private extension WebViewController {
         if
             let url = navigationAction.request.url,
             let urlComponents = URLComponents(string: url.absoluteString),
-            urlComponents.path == WebConstants.authorizedURLPath,
+            urlComponents.path == WebConstants.authURLPath,
             let items = urlComponents.queryItems,
             let codeItem = items.first(where: { $0.name == WebConstants.code }) {
             return codeItem.value
@@ -101,7 +108,7 @@ private extension WebViewController {
         
     func setupProgress() {
         progressView.progressTintColor = .ypBlack
-        progressView.trackTintColor = .ypGray
+        progressView.trackTintColor = UIColor(named: "YP Gray")
         progressView.progressViewStyle = .bar
     }
     
@@ -119,4 +126,5 @@ extension WebViewController: WKNavigationDelegate {
         } else {
             decisionHandler(.allow)
         }
+    }
 }

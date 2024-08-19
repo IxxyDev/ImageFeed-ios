@@ -65,9 +65,9 @@ private extension OAuth2Service {
     guard let url = URL(string: OAuth2Constants.tokenRequestURLString) else { preconditionFailure("Cannot make url") }
     return URLRequest.makeHTTPRequest(
       path: OAuth2Constants.tokenRequestPathString
-      + "?client_id=\(accessKey)"
-      + "&&client_secret=\(secureKey)"
-      + "&&redirect_uri=\(redirectURI)"
+      + "?client_id=\(Constants.accessKey)"
+      + "&&client_secret=\(Constants.secureKey)"
+      + "&&redirect_uri=\(Constants.redirectURI)"
       + "&&code=\(code)"
       + "&&grant_type=\(OAuth2Constants.tokenRequestGrantTypeString)",
       httpMethod: OAuth2Constants.tokenRequestMethodString,
