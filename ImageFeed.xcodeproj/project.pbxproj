@@ -17,6 +17,8 @@
 		3F2D380F2BEFAB63000D8B82 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D380E2BEFAB63000D8B82 /* WebViewController.swift */; };
 		3F3A94452B28CED300838A3B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3F3A94442B28CED300838A3B /* .gitignore */; };
 		3F949AD52C73D9D100F0F422 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F949AD42C73D9D100F0F422 /* RootNavigationController.swift */; };
+		3F949AD82C73DABC00F0F422 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F949AD72C73DABC00F0F422 /* Constants.swift */; };
+		3F949ADB2C73DAF600F0F422 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F949ADA2C73DAF600F0F422 /* SplashViewController.swift */; };
 		3FA500872BCDC66B00B83327 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA500862BCDC66B00B83327 /* ProfileViewController.swift */; };
 		3FA5008B2BCEBDD700B83327 /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA5008A2BCEBDD700B83327 /* SingleImageViewController.swift */; };
 		3FF918FB2B57058F0012DFDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF918F42B57058E0012DFDF /* AppDelegate.swift */; };
@@ -35,6 +37,8 @@
 		3F3A942D2B28CD4D00838A3B /* ImageFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3A94442B28CED300838A3B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		3F949AD42C73D9D100F0F422 /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
+		3F949AD72C73DABC00F0F422 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3F949ADA2C73DAF600F0F422 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		3FA500862BCDC66B00B83327 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3FA5008A2BCEBDD700B83327 /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 		3FF918F42B57058E0012DFDF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 		3F3A942F2B28CD4D00838A3B /* ImageFeed */ = {
 			isa = PBXGroup;
 			children = (
+				3F949AD92C73DAE800F0F422 /* Splash */,
+				3F949AD62C73DAB000F0F422 /* Api */,
 				3F2D380B2BEFA722000D8B82 /* Auth */,
 				3F02D0112B5D9FC0001165CC /* ImagesList */,
 				3FA500852BCDC65400B83327 /* Profile */,
@@ -121,6 +127,22 @@
 				3F2D38092BEFA02D000D8B82 /* Constants.swift */,
 			);
 			path = ImageFeed;
+			sourceTree = "<group>";
+		};
+		3F949AD62C73DAB000F0F422 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				3F949AD72C73DABC00F0F422 /* Constants.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		3F949AD92C73DAE800F0F422 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3F949ADA2C73DAF600F0F422 /* SplashViewController.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		3FA500852BCDC65400B83327 /* Profile */ = {
@@ -212,7 +234,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F02D0182B5D9FC0001165CC /* ImageListViewController.swift in Sources */,
+				3F949AD82C73DABC00F0F422 /* Constants.swift in Sources */,
 				3F2D380F2BEFAB63000D8B82 /* WebViewController.swift in Sources */,
+				3F949ADB2C73DAF600F0F422 /* SplashViewController.swift in Sources */,
 				3F02D0192B5D9FC0001165CC /* ImagesListCell.swift in Sources */,
 				3F949AD52C73D9D100F0F422 /* RootNavigationController.swift in Sources */,
 				3FA500872BCDC66B00B83327 /* ProfileViewController.swift in Sources */,
